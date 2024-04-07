@@ -1,4 +1,12 @@
 import { json } from '@sveltejs/kit';
+import { DOMParser } from 'xmldom';
+// @ts-expect-error - no types
+import togeojson from '@mapbox/togeojson';
+
+export async function GET() {
+  const peaks = await getPeaks();
+  return json(peaks);
+}
 
 /**
  * Retrieves a list of peaks out of json files in lib/data directory.
@@ -7,23 +15,43 @@ import { json } from '@sveltejs/kit';
 async function getPeaks(): Promise<App.Peak[]> {
   let peaks = [];
 
-  const paths = import.meta.glob('/src/lib/data/*.json', { eager: true }) as Record<string, { default: App.Peak }>;
+  const jsonPaths = import.meta.glob('/src/lib/data/*.json', { eager: true }) as Record<string, { default: App.Peak }>;
 
-  for (const path in paths) {
-    const file = paths[path].default;
-    const slug = path?.split('/')?.pop()?.replace('.json', '');
+  for (const path in jsonPaths) {
+    const peak = jsonPaths[path].default;
 
-    if (file && typeof file === 'object' && slug) {
-      peaks.push({ ...file, slug });
+    if (peak && typeof peak === 'object') {
+      let gpx;
+      try {
+        gpx = (await import(`../../../lib/data/${peak.slug}.gpx?raw`)).default;
+      } catch (_) {
+        console.error(`Could not find GPX file for ${peak.slug}`);
+      }
+      if (gpx) {
+        const geoJson = await getGeoJson(gpx);
+        peak.visited = true;
+        peak.visitDate = new Date(geoJson?.features[0]?.properties?.time).toLocaleDateString();
+        peak.geoJson = geoJson;
+      }
+      peaks.push(peak);
     }
   }
-
   peaks = peaks.sort((a, b) => a.elevation - b.elevation);
 
   return peaks;
 }
 
-export async function GET() {
-  const peaks = await getPeaks();
-  return json(peaks);
+/**
+ * Parses a GPX string and converts it to GeoJSON format.
+ * @param gpx - The GPX string to parse.
+ * @returns A promise that resolves to a GeoJSON object.
+ */
+async function getGeoJson(gpx: string): Promise<App.GeoJson> {
+  const parser = new DOMParser();
+
+  const parsedGPX = parser.parseFromString(
+    gpx, 'application/gpx+xml'
+  );
+
+  return togeojson.gpx(parsedGPX);
 }
