@@ -7,7 +7,18 @@ declare global {
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
+		type Peak = {
+			name: string;
+			elevation: number;
+			slug: string;
+			mountainRange: string;
+			location: [number, number]
+			visited: boolean;
+			visitDate?: Date;
+			visitedBefore: boolean;
+			slug: string;
+		}
 	}
 }
 
-export {};
+export { };
