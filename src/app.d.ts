@@ -10,15 +10,21 @@ declare global {
 		type Peak = {
 			name: string;
 			elevation: number;
-			slug: string;
 			mountainRange: string;
 			location: [number, number]
-			visited: boolean;
-			visitDate?: Date;
-			visitedBefore: boolean;
+			visited?: boolean;
+			visitDate?: string;
 			slug: string;
+			geoJson?: GeoJson;
 		}
+
+		type GeoJson = {
+			type: string;
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			features: any[];
+		} | null;
 	}
 }
+
 
 export { };
