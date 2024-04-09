@@ -1,0 +1,12 @@
+# check if there is any errors
+npm run check
+if [ $? -ne 0 ]; then
+  echo "Errors found in the code, please fix them before commiting"
+  exit 1
+fi
+
+# format the code
+npm run format
+
+# exit with code 0
+exit 0
