@@ -3,6 +3,8 @@ import { DOMParser } from 'xmldom';
 // @ts-expect-error - no types
 import togeojson from '@mapbox/togeojson';
 
+import type { Peak, GeoJson } from '$lib/types';
+
 export async function GET() {
 	const peaks = await getPeaks();
 	return json(peaks);
@@ -12,12 +14,12 @@ export async function GET() {
  * Retrieves a list of peaks out of json files in lib/data directory.
  * @returns A promise that resolves to an array of Peak objects.
  */
-async function getPeaks(): Promise<App.Peak[]> {
+async function getPeaks(): Promise<Peak[]> {
 	let peaks = [];
 
 	const jsonPaths = import.meta.glob('/src/lib/data/*.json', { eager: true }) as Record<
 		string,
-		{ default: App.Peak }
+		{ default: Peak }
 	>;
 
 	for (const path in jsonPaths) {
@@ -49,7 +51,7 @@ async function getPeaks(): Promise<App.Peak[]> {
  * @param gpx - The GPX string to parse.
  * @returns A promise that resolves to a GeoJSON object.
  */
-async function getGeoJson(gpx: string): Promise<App.GeoJson> {
+async function getGeoJson(gpx: string): Promise<GeoJson> {
 	const parser = new DOMParser();
 
 	const parsedGPX = parser.parseFromString(gpx, 'application/gpx+xml');

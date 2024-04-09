@@ -1,0 +1,13 @@
+npm run check
+if [ $? -ne 0 ]; then
+  echo "Errors found in the code, please fix them before commiting"
+  exit 1
+fi
+
+npm run lint
+if [ $? -ne 0 ]; then
+  echo "Errors found in the code, please fix them before commiting"
+  exit 1
+fi
+
+exit 0

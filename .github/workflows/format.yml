@@ -1,0 +1,20 @@
+name: Format and Lint
+
+on: [push, pull_request]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Node.js
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
+      - name: Install dependencies
+        run: npm ci
+      - name: Svelte Check
+        run: npm run check
+      - name: Lint code
+        run: npm run lint
