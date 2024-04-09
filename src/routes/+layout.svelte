@@ -43,6 +43,7 @@
 						} 
 					md:relative md:flex md:flex-wrap md:gap-2 md:px-0 md:ring-0`}
 						id="peaksList"
+						aria-label="Lista Szczytów"
 					>
 						{#each data.peaks as peak}
 							<li class="text-right md:text-left">
