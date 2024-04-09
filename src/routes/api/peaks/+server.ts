@@ -5,6 +5,8 @@ import togeojson from '@mapbox/togeojson';
 
 import type { Peak, GeoJson } from '$lib/types';
 
+export const prerender = true;
+
 export async function GET() {
 	const peaks = await getPeaks();
 	return json(peaks);
