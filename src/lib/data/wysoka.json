@@ -1,10 +1,7 @@
 {
-  "name": "Wysoka",
-  "elevation": 1050,
-  "mountainRange": "Pieniny",
-  "location": [
-    49.380278,
-    20.555556
-  ],
-  "slug": "wysoka"
+	"name": "Wysoka",
+	"elevation": 1050,
+	"mountainRange": "Pieniny",
+	"location": [49.380278, 20.555556],
+	"slug": "wysoka"
 }

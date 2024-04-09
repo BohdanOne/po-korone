@@ -1,10 +1,7 @@
 {
-  "name": "Rysy",
-  "elevation": 2499,
-  "mountainRange": "Tatry",
-  "location": [
-    49.179306,
-    20.088444
-  ],
-  "slug": "rysy"
+	"name": "Rysy",
+	"elevation": 2499,
+	"mountainRange": "Tatry",
+	"location": [49.179306, 20.088444],
+	"slug": "rysy"
 }

@@ -1,10 +1,7 @@
 {
-  "name": "Chełmiec",
-  "elevation": 850,
-  "mountainRange": "Góry Wałbrzyskie",
-  "location": [
-    50.779167,
-    16.210278
-  ],
-  "slug": "chelmiec"
+	"name": "Chełmiec",
+	"elevation": 850,
+	"mountainRange": "Góry Wałbrzyskie",
+	"location": [50.779167, 16.210278],
+	"slug": "chelmiec"
 }

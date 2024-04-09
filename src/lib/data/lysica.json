@@ -1,10 +1,7 @@
 {
-  "name": "Łysica",
-  "elevation": 614,
-  "mountainRange": "Góry Świętokrzyskie",
-  "location": [
-    50.890833,
-    20.900833
-  ],
-  "slug": "lysica"
+	"name": "Łysica",
+	"elevation": 614,
+	"mountainRange": "Góry Świętokrzyskie",
+	"location": [50.890833, 20.900833],
+	"slug": "lysica"
 }

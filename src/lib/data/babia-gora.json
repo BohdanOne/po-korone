@@ -1,10 +1,7 @@
 {
-  "name": "Babia Góra",
-  "elevation": 1725,
-  "mountainRange": "Beskid Żywiecki",
-  "location": [
-    49.573333,
-    19.529444
-  ],
-  "slug": "babia-gora"
+	"name": "Babia Góra",
+	"elevation": 1725,
+	"mountainRange": "Beskid Żywiecki",
+	"location": [49.573333, 19.529444],
+	"slug": "babia-gora"
 }

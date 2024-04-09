@@ -1,10 +1,7 @@
 {
-  "name": "Wysoka Kopa",
-  "elevation": 1126,
-  "mountainRange": "Góry Izerskie",
-  "location": [
-    50.850278,
-    15.42
-  ],
-  "slug": "wysoka-kopa"
+	"name": "Wysoka Kopa",
+	"elevation": 1126,
+	"mountainRange": "Góry Izerskie",
+	"location": [50.850278, 15.42],
+	"slug": "wysoka-kopa"
 }

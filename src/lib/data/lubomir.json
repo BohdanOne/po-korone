@@ -1,10 +1,7 @@
 {
-  "name": "Lubomir",
-  "elevation": 904,
-  "mountainRange": "Beskid Makowski",
-  "location": [
-    49.766944,
-    20.059722
-  ],
-  "slug": "lubomir"
+	"name": "Lubomir",
+	"elevation": 904,
+	"mountainRange": "Beskid Makowski",
+	"location": [49.766944, 20.059722],
+	"slug": "lubomir"
 }

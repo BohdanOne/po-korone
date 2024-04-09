@@ -1,10 +1,7 @@
 {
-  "name": "Biskupia Kopa",
-  "elevation": 889,
-  "mountainRange": "Góry Opawskie",
-  "location": [
-    50.256667,
-    17.428611
-  ],
-  "slug": "biskupia-kopa"
+	"name": "Biskupia Kopa",
+	"elevation": 889,
+	"mountainRange": "Góry Opawskie",
+	"location": [50.256667, 17.428611],
+	"slug": "biskupia-kopa"
 }

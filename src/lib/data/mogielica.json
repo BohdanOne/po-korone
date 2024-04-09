@@ -1,10 +1,7 @@
 {
-  "name": "Mogielica",
-  "elevation": 1171,
-  "mountainRange": "Beskid Wyspowy",
-  "location": [
-    49.655194,
-    20.276694
-  ],
-  "slug": "mogielica"
+	"name": "Mogielica",
+	"elevation": 1171,
+	"mountainRange": "Beskid Wyspowy",
+	"location": [49.655194, 20.276694],
+	"slug": "mogielica"
 }

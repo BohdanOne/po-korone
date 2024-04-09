@@ -1,10 +1,7 @@
 {
-  "name": "Wielka Sowa",
-  "elevation": 1015,
-  "mountainRange": "Góry Sowie",
-  "location": [
-    50.680158,
-    16.485497
-  ],
-  "slug": "wielka-sowa"
+	"name": "Wielka Sowa",
+	"elevation": 1015,
+	"mountainRange": "Góry Sowie",
+	"location": [50.680158, 16.485497],
+	"slug": "wielka-sowa"
 }

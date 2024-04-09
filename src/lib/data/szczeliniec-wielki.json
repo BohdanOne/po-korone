@@ -1,10 +1,7 @@
 {
-  "name": "Szczeliniec Wielki",
-  "elevation": 919,
-  "mountainRange": "Góry Stołowe",
-  "location": [
-    50.485833,
-    16.339167
-  ],
-  "slug": "szczeliniec-wielki"
+	"name": "Szczeliniec Wielki",
+	"elevation": 919,
+	"mountainRange": "Góry Stołowe",
+	"location": [50.485833, 16.339167],
+	"slug": "szczeliniec-wielki"
 }

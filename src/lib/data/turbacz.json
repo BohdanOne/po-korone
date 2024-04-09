@@ -1,10 +1,7 @@
 {
-  "name": "Turbacz",
-  "elevation": 1310,
-  "mountainRange": "Gorce",
-  "location": [
-    49.542944,
-    20.111556
-  ],
-  "slug": "turbacz"
+	"name": "Turbacz",
+	"elevation": 1310,
+	"mountainRange": "Gorce",
+	"location": [49.542944, 20.111556],
+	"slug": "turbacz"
 }

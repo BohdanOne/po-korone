@@ -1,10 +1,7 @@
 {
-  "name": "Tarnica",
-  "elevation": 1346,
-  "mountainRange": "Bieszczady Zachodnie",
-  "location": [
-    49.074778,
-    22.72675
-  ],
-  "slug": "tarnica"
+	"name": "Tarnica",
+	"elevation": 1346,
+	"mountainRange": "Bieszczady Zachodnie",
+	"location": [49.074778, 22.72675],
+	"slug": "tarnica"
 }

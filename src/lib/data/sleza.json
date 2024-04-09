@@ -1,10 +1,7 @@
 {
-  "name": "Ślęża",
-  "elevation": 718,
-  "mountainRange": "Masyw Ślęży",
-  "location": [
-    50.865,
-    16.708611
-  ],
-  "slug": "sleza"
+	"name": "Ślęża",
+	"elevation": 718,
+	"mountainRange": "Masyw Ślęży",
+	"location": [50.865, 16.708611],
+	"slug": "sleza"
 }

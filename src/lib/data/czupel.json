@@ -1,10 +1,7 @@
 {
-  "name": "Czupel",
-  "elevation": 933,
-  "mountainRange": "Beskid Mały",
-  "location": [
-    49.766111,
-    19.155278
-  ],
-  "slug": "czupel"
+	"name": "Czupel",
+	"elevation": 933,
+	"mountainRange": "Beskid Mały",
+	"location": [49.766111, 19.155278],
+	"slug": "czupel"
 }

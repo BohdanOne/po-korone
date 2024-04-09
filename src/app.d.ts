@@ -11,12 +11,12 @@ declare global {
 			name: string;
 			elevation: number;
 			mountainRange: string;
-			location: [number, number]
+			location: [number, number];
 			visited?: boolean;
 			visitDate?: string;
 			slug: string;
 			geoJson?: GeoJson;
-		}
+		};
 
 		type GeoJson = {
 			type: string;
@@ -26,5 +26,4 @@ declare global {
 	}
 }
 
-
-export { };
+export {};

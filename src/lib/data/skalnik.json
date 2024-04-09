@@ -1,10 +1,7 @@
 {
-  "name": "Skalnik",
-  "elevation": 945,
-  "mountainRange": "Rudawy Janowickie",
-  "location": [
-    50.8085,
-    15.90025
-  ],
-  "slug": "skalnik"
+	"name": "Skalnik",
+	"elevation": 945,
+	"mountainRange": "Rudawy Janowickie",
+	"location": [50.8085, 15.90025],
+	"slug": "skalnik"
 }

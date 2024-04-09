@@ -1,10 +1,7 @@
 {
-  "name": "Śnieżnik",
-  "elevation": 1423,
-  "mountainRange": "Masyw Śnieżnika",
-  "location": [
-    50.207004,
-    16.849226
-  ],
-  "slug": "snieznik"
+	"name": "Śnieżnik",
+	"elevation": 1423,
+	"mountainRange": "Masyw Śnieżnika",
+	"location": [50.207004, 16.849226],
+	"slug": "snieznik"
 }
