@@ -4,8 +4,6 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-npm run format
-
 npm run lint
 if [ $? -ne 0 ]; then
   echo "Errors found in the code, please fix them before commiting"
