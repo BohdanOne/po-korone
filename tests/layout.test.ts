@@ -48,3 +48,5 @@ test('on mobile viewport, when list of peaks is visible, clicking outside of it 
 	await page.click('header');
 	await expect(page.getByRole('list', { name: 'Lista Szczytów' })).not.toBeVisible();
 });
+
+// todo : list all peaks and add test to check if all of them are in the nav and are working properly

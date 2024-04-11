@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import type { Peak } from '$lib/types';
 
 	export let peaks: Peak[];
@@ -12,6 +13,8 @@
 	function handlePeaksListClose() {
 		peaksListOpen = false;
 	}
+
+	page.subscribe(() => {});
 </script>
 
 <svelte:body on:click={handlePeaksListClose} />
@@ -45,11 +48,22 @@
 				aria-label="Lista Szczytów"
 			>
 				{#each peaks as peak}
-					<li class="text-right md:text-left">
-						<a class="" href={`/${peak.slug}`}>{peak.name}</a>
+					{@const peakSlug = `/${peak.slug}`}
+					{@const isCurrentPage = $page.url.pathname === peakSlug}
+					<li class="text-right md:text-left" aria-current={isCurrentPage}>
+						<a
+							class={`border-b-2 ${isCurrentPage ? 'border-red-600 text-red-600' : 'border-transparent'}`}
+							href={peakSlug}>{peak.name}</a
+						>
 					</li>
 				{/each}
 			</ul>
 		</li>
 	</ul>
 </nav>
+
+<style>
+	li[aria-current='page'] a {
+		view-transition-name: 'active-page';
+	}
+</style>

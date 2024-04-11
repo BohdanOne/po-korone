@@ -3,7 +3,6 @@ export type Peak = {
 	elevation: number;
 	mountainRange: string;
 	location: [number, number];
-	visited?: boolean;
 	visitDate?: string;
 	slug: string;
 	geoJson?: GeoJson;
