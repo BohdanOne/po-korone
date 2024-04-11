@@ -32,11 +32,10 @@ async function getPeaks(): Promise<Peak[]> {
 			try {
 				gpx = (await import(`../../../lib/data/${peak.slug}.gpx?raw`)).default;
 			} catch (_) {
-				console.error(`Could not find GPX file for ${peak.slug}`);
+				// no GPX file
 			}
 			if (gpx) {
 				const geoJson = await getGeoJson(gpx);
-				peak.visited = true;
 				peak.visitDate = new Date(geoJson?.features[0]?.properties?.time).toLocaleDateString();
 				peak.geoJson = geoJson;
 			}
