@@ -6,7 +6,10 @@ export type Peak = {
 	visitDate?: string;
 	slug: string;
 	geoJson?: GeoJson;
+	covers?: { [key in CoverBreakpoint]: [string, string] };
 };
+
+export type CoverBreakpoint = 'xs' | 's' | 'm' | 'l';
 
 export type GeoJson = {
 	type: string;

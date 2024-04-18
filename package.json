@@ -13,7 +13,8 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"prepare": "husky"
+		"prepare": "husky",
+		"add-covers": "node ./scripts/addCoverImages.js"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
