@@ -9,8 +9,10 @@
 </script>
 
 <div class="flex flex-wrap gap-6">
-	{#if peak.covers}
-		<PeakCover covers={peak.covers} />
+	{#if peak}
+		{#if peak.covers}
+			<PeakCover covers={peak.covers} />
+		{/if}
+		<PeakInfo {peak} />
 	{/if}
-	<PeakInfo {peak} />
 </div>
