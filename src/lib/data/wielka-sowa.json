@@ -3,5 +3,23 @@
 	"elevation": 1015,
 	"mountainRange": "Góry Sowie",
 	"location": [50.680158, 16.485497],
-	"slug": "wielka-sowa"
+	"slug": "wielka-sowa",
+	"covers": {
+		"xs": [
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_267,q_auto,w_267/v1/po-korone/wielka-sowa/IMG_5838_tl90ju?_a=BAMABmRg0",
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_534,q_auto,w_534/v1/po-korone/wielka-sowa/IMG_5838_tl90ju?_a=BAMABmRg0"
+		],
+		"s": [
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_343,q_auto,w_343/v1/po-korone/wielka-sowa/IMG_5838_tl90ju?_a=BAMABmRg0",
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_686,q_auto,w_686/v1/po-korone/wielka-sowa/IMG_5838_tl90ju?_a=BAMABmRg0"
+		],
+		"m": [
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_500,q_auto,w_500/v1/po-korone/wielka-sowa/IMG_5838_tl90ju?_a=BAMABmRg0",
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_1000,q_auto,w_1000/v1/po-korone/wielka-sowa/IMG_5838_tl90ju?_a=BAMABmRg0"
+		],
+		"l": [
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_608,q_auto,w_608/v1/po-korone/wielka-sowa/IMG_5838_tl90ju?_a=BAMABmRg0",
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_1216,q_auto,w_1216/v1/po-korone/wielka-sowa/IMG_5838_tl90ju?_a=BAMABmRg0"
+		]
+	}
 }

@@ -3,5 +3,23 @@
 	"elevation": 1084,
 	"mountainRange": "Góry Orlickie",
 	"location": [50.353186, 16.360719],
-	"slug": "orlica"
+	"slug": "orlica",
+	"covers": {
+		"xs": [
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_267,q_auto,w_267/v1/po-korone/orlica/IMG_3450_k7tnjs?_a=BAMABmRg0",
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_534,q_auto,w_534/v1/po-korone/orlica/IMG_3450_k7tnjs?_a=BAMABmRg0"
+		],
+		"s": [
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_343,q_auto,w_343/v1/po-korone/orlica/IMG_3450_k7tnjs?_a=BAMABmRg0",
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_686,q_auto,w_686/v1/po-korone/orlica/IMG_3450_k7tnjs?_a=BAMABmRg0"
+		],
+		"m": [
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_500,q_auto,w_500/v1/po-korone/orlica/IMG_3450_k7tnjs?_a=BAMABmRg0",
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_1000,q_auto,w_1000/v1/po-korone/orlica/IMG_3450_k7tnjs?_a=BAMABmRg0"
+		],
+		"l": [
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_608,q_auto,w_608/v1/po-korone/orlica/IMG_3450_k7tnjs?_a=BAMABmRg0",
+			"https://res.cloudinary.com/bohdanonedev/image/upload/c_thumb,f_auto,g_center,h_1216,q_auto,w_1216/v1/po-korone/orlica/IMG_3450_k7tnjs?_a=BAMABmRg0"
+		]
+	}
 }
