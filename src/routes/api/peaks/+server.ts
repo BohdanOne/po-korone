@@ -19,7 +19,7 @@ export async function GET() {
 async function getPeaks(): Promise<Peak[]> {
 	let peaks = [];
 
-	const jsonPaths = import.meta.glob('/src/lib/data/*.json', { eager: true }) as Record<
+	const jsonPaths = import.meta.glob('/src/lib/data/peaks/*.json', { eager: true }) as Record<
 		string,
 		{ default: Peak }
 	>;
@@ -30,7 +30,7 @@ async function getPeaks(): Promise<Peak[]> {
 		if (peak && typeof peak === 'object') {
 			let gpx;
 			try {
-				gpx = (await import(`../../../lib/data/${peak.slug}.gpx?raw`)).default;
+				gpx = (await import(`../../../lib/data/peaks/${peak.slug}.gpx?raw`)).default;
 			} catch (_) {
 				// no GPX file
 			}

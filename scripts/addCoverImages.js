@@ -4,8 +4,7 @@ import path from 'path';
 // Read the covers.json file
 const coversData = JSON.parse(fs.readFileSync('src/lib/data/covers.json', 'utf8'));
 
-// Get all JSON files in the /data directory
-const dataDir = 'src/lib/data';
+const dataDir = 'src/lib/data/peaks';
 const files = fs.readdirSync(dataDir);
 
 files.forEach((file) => {
