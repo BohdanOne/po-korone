@@ -1,9 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { DOMParser } from 'xmldom';
-// @ts-expect-error - no types
-import togeojson from '@mapbox/togeojson';
-
-import type { Peak, GeoJson } from '$lib/types';
+import type { Peak } from '$lib/types';
+import getGeoJson from '$lib/utils/getGeoJson';
 
 export const prerender = true;
 
@@ -37,7 +34,6 @@ async function getPeaks(): Promise<Peak[]> {
 			if (gpx) {
 				const geoJson = await getGeoJson(gpx);
 				peak.visitDate = new Date(geoJson?.features[0]?.properties?.time).toLocaleDateString();
-				peak.geoJson = geoJson;
 			}
 			peaks.push(peak);
 		}
@@ -45,17 +41,4 @@ async function getPeaks(): Promise<Peak[]> {
 	peaks = peaks.sort((a, b) => a.elevation - b.elevation);
 
 	return peaks;
-}
-
-/**
- * Parses a GPX string and converts it to GeoJSON format.
- * @param gpx - The GPX string to parse.
- * @returns A promise that resolves to a GeoJSON object.
- */
-async function getGeoJson(gpx: string): Promise<GeoJson> {
-	const parser = new DOMParser();
-
-	const parsedGPX = parser.parseFromString(gpx, 'application/gpx+xml');
-
-	return togeojson.gpx(parsedGPX);
 }
