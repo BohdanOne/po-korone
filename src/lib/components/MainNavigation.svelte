@@ -3,11 +3,12 @@
 	import { page } from '$app/stores';
 	import type { Peak } from '$lib/types';
 
-	export let peaks: Peak[];
+	let { peaks }: { peaks: Peak[] } = $props();
 
-	let peaksListOpen = false;
+	let peaksListOpen = $state(false);
 
-	function handlePeaksListToggle() {
+	function handlePeaksListToggle(e: MouseEvent) {
+		e.stopPropagation();
 		peaksListOpen = !peaksListOpen;
 	}
 
@@ -18,7 +19,7 @@
 	page.subscribe(() => {});
 </script>
 
-<svelte:body on:click={handlePeaksListClose} />
+<svelte:body onclick={handlePeaksListClose} />
 
 <nav>
 	<ul class="flex justify-between md:flex-col md:gap-2">
@@ -34,7 +35,7 @@
 				id="peaksListToggle"
 				aria-expanded={peaksListOpen}
 				aria-controls="peaksList"
-				on:click|stopPropagation={handlePeaksListToggle}
+				onclick={handlePeaksListToggle}
 			>
 				Szczyty
 			</button>

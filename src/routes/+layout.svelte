@@ -3,7 +3,7 @@
 	import '../styles.css';
 	import MainNavigation from '$lib/components/MainNavigation.svelte';
 
-	export let data;
+	let { data, children } = $props();
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -22,6 +22,6 @@
 		<MainNavigation peaks={data.peaks} />
 	</header>
 	<main class="p-4 grow">
-		<slot />
+		{@render children()}
 	</main>
 </div>

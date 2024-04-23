@@ -4,10 +4,12 @@
 	import type { Peak } from '$lib/types';
 	import iconSvg from '$lib/assets/map-marker.svg';
 
-	export let map: Map;
-	export let location: Peak['location'];
-	export let name: Peak['name'];
-	export let slug: Peak['slug'];
+	let {
+		map,
+		location,
+		name,
+		slug
+	}: { map: Map; location: Peak['location']; name: Peak['name']; slug: Peak['slug'] } = $props();
 
 	onMount(async () => {
 		const { marker, icon } = await import('leaflet');

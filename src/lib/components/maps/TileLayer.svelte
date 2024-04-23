@@ -2,7 +2,7 @@
 	import type { Map, TileLayer } from 'leaflet';
 	import { onDestroy, onMount } from 'svelte';
 
-	export let map: Map;
+	let { map }: { map: Map } = $props();
 
 	const options = {
 		maxZoom: 19,

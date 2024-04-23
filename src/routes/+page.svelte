@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { Map } from 'leaflet';
+	import type { Peak } from '$lib/types';
 	import MapContainer from '$lib/components/maps/MapContainer.svelte';
 	import TileLayer from '$lib/components/maps/TileLayer.svelte';
 	import Marker from '$lib/components/maps/Marker.svelte';
 	import VisitedPeaks from '$lib/components/VisitedPeaks.svelte';
 
-	export let data;
-	export let map: Map;
+	let { data, map }: { data: { peaks: Peak[] }; map: Map } = $props();
 </script>
 
 <MapContainer

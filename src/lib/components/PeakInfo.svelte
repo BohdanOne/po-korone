@@ -2,7 +2,7 @@
 	import type { Peak } from '$lib/types';
 	import PeakInfoLine from './PeakInfoLine.svelte';
 
-	export let peak: Peak;
+	let { peak }: { peak: Peak } = $props();
 </script>
 
 <div class="flex flex-col gap-4">
