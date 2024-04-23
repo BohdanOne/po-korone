@@ -1,8 +1,10 @@
 <script lang="ts">
 	import type { CoverBreakpoint } from '$lib/types';
 
-	export let covers: { [key in CoverBreakpoint]: [string, string] };
-	export let small = false;
+	let {
+		covers,
+		small
+	}: { covers: { [key in CoverBreakpoint]: [string, string] }; small?: boolean } = $props();
 </script>
 
 <picture>

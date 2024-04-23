@@ -2,7 +2,7 @@
 	import type { Peak } from '$lib/types';
 	import PeakCover from './PeakCover.svelte';
 
-	export let peaks: Peak[];
+	let { peaks }: { peaks: Peak[] } = $props();
 </script>
 
 <section class="py-6">

@@ -1,12 +1,14 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte';
+	import { onDestroy, onMount, type Snippet } from 'svelte';
 	import type { Map, MapOptions } from 'leaflet';
 
-	let tailwindClass: string = '';
-	export { tailwindClass as class };
-	export let options: MapOptions;
-	export let title: string;
-	export let map: Map;
+	let {
+		class: tailwindClass,
+		options,
+		title,
+		map = $bindable(),
+		children
+	}: { class: string; options: MapOptions; title: string; map: Map; children: Snippet } = $props();
 
 	let mapContainer: HTMLDivElement;
 
@@ -23,6 +25,6 @@
 
 <div bind:this={mapContainer} class={tailwindClass} {title}>
 	{#if map}
-		<slot />
+		{@render children()}
 	{/if}
 </div>

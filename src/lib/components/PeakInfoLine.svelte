@@ -1,6 +1,5 @@
 <script lang="ts">
-	export let lineTitle: string;
-	export let lineValue: string;
+	let { lineTitle, lineValue }: { lineTitle: string; lineValue: string } = $props();
 </script>
 
 <p class="mb-2 flex flex-wrap gap-4 justify-between max-w-md border-b-2 border-red-300">
