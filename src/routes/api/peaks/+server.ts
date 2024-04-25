@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { Peak } from '$lib/types';
 import getGeoJson from '$lib/utils/getGeoJson';
+import getPeakDataModules from '$lib/utils/getPeakDataModules';
 
 export const prerender = true;
 
@@ -16,13 +17,10 @@ export async function GET() {
 async function getPeaks(): Promise<Peak[]> {
 	let peaks = [];
 
-	const jsonPaths = import.meta.glob('/src/lib/data/peaks/*.json', { eager: true }) as Record<
-		string,
-		{ default: Peak }
-	>;
+	const peakModules = getPeakDataModules();
 
-	for (const path in jsonPaths) {
-		const peak = jsonPaths[path].default;
+	for (const path in peakModules) {
+		const peak = peakModules[path].default;
 
 		if (peak && typeof peak === 'object') {
 			let gpx;
