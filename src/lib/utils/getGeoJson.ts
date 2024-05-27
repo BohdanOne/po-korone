@@ -6,13 +6,20 @@ import type { GeoJson } from '$lib/types';
 
 /**
  * Parses a GPX string and converts it to GeoJSON format.
- * @param gpx - The GPX string to parse.
+ * @param slug - Slug to search a gpx file.
  * @returns A promise that resolves to a GeoJSON object.
  */
-export default async function getGeoJson(gpx: string): Promise<GeoJson> {
-	const parser = new DOMParser();
+export default async function getGeoJson(slug: string): Promise<GeoJson | null> {
+	try {
+		const gpx = await importGpx(slug);
+		const parser = new DOMParser();
+		return togeojson.gpx(parser.parseFromString(gpx, 'application/gpx+xml'));
+	} catch (_error) {
+		// console.log(error);
+		return null;
+	}
+}
 
-	const parsedGPX = parser.parseFromString(gpx, 'application/gpx+xml');
-
-	return togeojson.gpx(parsedGPX);
+async function importGpx(slug: string) {
+	return (await import(/* @vite-ignore */ `../data/peaks/${slug}.gpx?raw`)).default;
 }

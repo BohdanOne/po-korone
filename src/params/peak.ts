@@ -1,13 +1,9 @@
-import type { Peak } from '$lib/types';
 import type { ParamMatcher } from '@sveltejs/kit';
+import getPeakDataModules from '$lib/utils/getPeakDataModules';
 
 export const match: ParamMatcher = (param) => {
-	const jsonPaths = import.meta.glob('/src/lib/data/peaks/*.json', { eager: true }) as Record<
-		string,
-		{ default: Peak }
-	>;
-
-	const slugs = Object.keys(jsonPaths).map((peak) => jsonPaths[peak].default.slug);
+	const peakModules = getPeakDataModules();
+	const slugs = Object.keys(peakModules).map((path) => peakModules[path].default.slug);
 
 	return slugs.includes(param);
 };
