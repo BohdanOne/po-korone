@@ -14,7 +14,8 @@
 	class="w-full h-1/2"
 	options={{
 		center: [50, 19.030278],
-		zoom: 6
+		zoom: 6,
+		scrollWheelZoom: false
 	}}
 	title="Mapa wszystkich szczytów"
 >
